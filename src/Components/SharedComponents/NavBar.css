@@ -1,0 +1,10 @@
+.NavBar-brand {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.NavBar-logo {
+    height: 28px;
+    padding-right: .75em
+}
