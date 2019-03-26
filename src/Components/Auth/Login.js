@@ -4,6 +4,8 @@ import {Redirect} from 'react-router-dom'
 
 import spotify_logo from '../../Assets/spotify_logo.eps';
 import './Login.css';
+import NavBar from '../SharedComponents/NavBar.js'
+
 
 class Login extends Component {
 
@@ -59,9 +61,10 @@ class Login extends Component {
 
     render() {
         return (
-            <div className="Login">
-                <span className="Login-span">
-                    <img src={spotify_logo} className="Login-logo" alt="logo"/>
+            <div className="login">
+                <NavBar />
+                <span className="login-span">
+                    <img src={spotify_logo} className="login-logo" alt="logo"/>
                     <br/>
 
                     <form name="Login" onSubmit={this.handleLogin}>

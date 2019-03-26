@@ -1,10 +1,11 @@
-.NavBar-brand {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+.navbar {
+    background-color: #1e1e1e;
 }
 
-.NavBar-logo {
-    height: 28px;
-    padding-right: .75em
+.navbar-logo {
+
+}
+
+.navbar-items {
+
 }

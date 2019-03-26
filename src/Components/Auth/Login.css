@@ -1,12 +1,12 @@
-.Login {
+.login {
     text-align: center;
 }
 
-.Login-logo {
+.login-logo {
     height: 10vmin;
 }
 
-.Login-span {
+.login-span {
     background-color: #1e1e1e;
     min-height: 100vh;
     display: flex;
