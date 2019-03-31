@@ -1,5 +1,12 @@
 .login {
     text-align: center;
+    background-color: #1e1e1e;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .login-logo {
@@ -8,14 +15,10 @@
 }
 
 .login-span {
-    background-color: #1e1e1e;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+    text-align: center;
+    background-color: #181818;
+    border-radius: 15px;
+    padding: 4rem;
 }
 
 .form-group {
@@ -24,7 +27,7 @@
 }
 
 #login-form {
-    background-color: #333333;
+    background-color: #1e1e1e;
     border-radius: 4px;
     border: none;
     color: white;
@@ -56,7 +59,6 @@
     padding-left: 37px;
     padding-right: 37px;
     text-align: center;
-    text-decoration: none;
 }
 
 #login-button:hover {
@@ -66,7 +68,7 @@
 }
 
 #link-button {
-    background-color: #1e1e1e;
+    background-color: #181818;
     border: none;
     font-size: 12px;
     color: white;

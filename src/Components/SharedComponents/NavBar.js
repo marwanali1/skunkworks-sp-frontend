@@ -17,12 +17,12 @@ const NavBar = () => {
             <Navbar.Toggle/>
             <Navbar.Collapse>
                 <Nav id="nav-link-container">
-                    <Nav.Link href="/premium">Premium</Nav.Link>
-                    <Nav.Link href="/help">Help</Nav.Link>
-                    <Nav.Link href="/download">Download</Nav.Link>
+                    <Nav.Link href="/premium"><b>Premium</b></Nav.Link>
+                    <Nav.Link href="/help"><b>Help</b></Nav.Link>
+                    <Nav.Link href="/download"><b>Download</b></Nav.Link>
                     <Nav.Link>|</Nav.Link>
-                    <Nav.Link href="/signup">Sign up</Nav.Link>
-                    <Nav.Link href="/login">Login</Nav.Link>
+                    <Nav.Link href="/signup"><b>Sign up</b></Nav.Link>
+                    <Nav.Link href="/login"><b>Login</b></Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

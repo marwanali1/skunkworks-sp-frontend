@@ -92,12 +92,10 @@ class Login extends Component {
                             <Button id="login-button" className="login-button"><b>LOG IN</b></Button>
                         </form>
 
-                        <ButtonToolbar>
-                            <Button id="link-button" variant="link"
-                                    onClick={this.handleSignUp}>SIGN UP</Button>
-                            <Button id="link-button" variant="link"
-                                    onClick={this.handleReset}>RESET PASSWORD</Button>
-                        </ButtonToolbar>
+                        <Button id="link-button" variant="link"
+                                onClick={this.handleSignUp}>SIGN UP</Button>
+                        <Button id="link-button" variant="link"
+                                onClick={this.handleReset}>RESET PASSWORD</Button>
                     </span>
                 </div>
             </div>
