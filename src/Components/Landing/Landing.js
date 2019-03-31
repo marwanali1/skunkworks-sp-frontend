@@ -11,7 +11,7 @@ class Landing extends Component {
             <div>
                 <NavBar />
                 <div className="landing">
-                    <h1>Welcome to Home</h1>
+                    <h1>Welcome to Spotify Clone</h1>
                 </div>
             </div>
         )

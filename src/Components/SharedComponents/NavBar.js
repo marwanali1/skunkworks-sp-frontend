@@ -1,6 +1,6 @@
 import React from 'react';
 import {Nav, Navbar} from 'react-bootstrap';
-import spotify_logo from '../../Assets/spotify_logo.eps';
+import spotify_logo from '../../Assets/Spotify_Logo_RGB_White.png';
 import './NavBar.css'
 
 const NavBar = () => {
@@ -21,7 +21,7 @@ const NavBar = () => {
                     <Nav.Link href="/help"><b>Help</b></Nav.Link>
                     <Nav.Link href="/download"><b>Download</b></Nav.Link>
                     <Nav.Link>|</Nav.Link>
-                    <Nav.Link href="/signup"><b>Sign up</b></Nav.Link>
+                    <Nav.Link href="/sign_up"><b>Sign up</b></Nav.Link>
                     <Nav.Link href="/login"><b>Login</b></Nav.Link>
                 </Nav>
             </Navbar.Collapse>
