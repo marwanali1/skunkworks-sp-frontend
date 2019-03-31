@@ -61,45 +61,45 @@ class Login extends Component {
 
     render() {
         return (
-            <div className="login">
-                <NavBar />
-                <span className="login-span">
-                    <img src={spotify_logo} className="login-logo" alt="logo"/>
-                    <br/>
+            <div>
+                <NavBar/>
+                <div className="login">
+                    <span className="login-span">
+                        <img src={spotify_logo} className="login-logo" alt="logo" />
 
-                    <form name="Login" onSubmit={this.handleLogin}>
-                        <FormControl
-                            className="login-form"
-                            value={this.state.email}
-                            key="email"
-                            type="text"
-                            placeholder="Email or username"
-                            onChange={this.handleChange}/>
-                        <br/>
-                        <FormControl
-                            className="login-form"
-                            value={this.state.password}
-                            key="password"
-                            type="password"
-                            placeholder="Password"
-                            onChange={this.handleChange}/>
-                        <br/>
+                        <form name="Login" onSubmit={this.handleLogin}>
+                            <FormControl
+                                id="login-form"
+                                value={this.state.email}
+                                key="email"
+                                type="text"
+                                placeholder="Email or username"
+                                onChange={this.handleChange}/>
 
-                        <LoginHandler
-                        redirect={this.state.loggedIn}
-                        loginAlert={this.state.loginAlert}
-                        errorMessage={this.state.errorMessage}/>
+                            <FormControl
+                                id="login-form"
+                                value={this.state.password}
+                                key="password"
+                                type="password"
+                                placeholder="Password"
+                                onChange={this.handleChange}/>
 
-                        <Button type="submit" className="login-button"><b>LOG IN</b></Button>
-                    </form>
+                            <LoginHandler
+                                redirect={this.state.loggedIn}
+                                loginAlert={this.state.loginAlert}
+                                errorMessage={this.state.errorMessage}/>
 
-                    <ButtonToolbar>
-                        <Button bsStyle="link" className="link-button"
-                                onClick={this.handleSignUp}>SIGN UP</Button>
-                        <Button bsStyle="link" className="link-button"
-                                onClick={this.handleReset}>RESET PASSWORD</Button>
-                    </ButtonToolbar>
-                </span>
+                            <Button id="login-button" className="login-button"><b>LOG IN</b></Button>
+                        </form>
+
+                        <ButtonToolbar>
+                            <Button id="link-button" variant="link"
+                                    onClick={this.handleSignUp}>SIGN UP</Button>
+                            <Button id="link-button" variant="link"
+                                    onClick={this.handleReset}>RESET PASSWORD</Button>
+                        </ButtonToolbar>
+                    </span>
+                </div>
             </div>
         );
     }
@@ -116,13 +116,11 @@ class LoginHandler extends Component {
                     {this.props.errorMessage}
                 </Alert>
             )
-        }
-        else if (this.props.redirect) {
+        } else if (this.props.redirect) {
             return (
                 <Redirect to="/"/>
             )
-        }
-        else {
+        } else {
             return (
                 <div>
                 </div>

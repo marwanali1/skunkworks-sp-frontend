@@ -3,6 +3,7 @@
 }
 
 .login-logo {
+    margin: 30px 2px;
     height: 10vmin;
 }
 
@@ -18,55 +19,59 @@
 }
 
 .form-group {
-    background-color: #1e1e1e;
+    background-color: white;
     height: 10vmin;
 }
 
-.link-button {
-    background-color: #1e1e1e;
-    border: none;
-    color: white;
-}
-
-.link-buttons:hover {
-    text-underline: white;
-}
-
-.login-button {
-    background-color: #1db854;
-    border-radius: 20px;
-    border: none;
-    color: white;
-    margin: 30px 2px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 35px;
-    padding-right: 35px;
-    text-align: center;
-    text-decoration: none;
-}
-
-.login-button:hover {
-    background-color: #1cd760;
-    margin: 28px 2px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 38px;
-    padding-right: 38px;
-}
-
-.login-form {
+#login-form {
     background-color: #333333;
     border-radius: 4px;
     border: none;
     color: white;
     font-family: "Helvetica", Helvetica, serif;
     font-size: 14px;
-    margin: 10px 0px;
+    margin: 20px 2px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    height: 20px;
+    height: 33px;
     width: 300px;
+}
+
+#login-form:focus {
+    background-color: #333333;
+    outline: #1db854;
+}
+
+#login-button {
+    background-color: #1db854;
+    border-radius: 20px;
+    border: none;
+    font-size: 11px;
+    color: white;
+    margin: 30px 30px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 37px;
+    padding-right: 37px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#login-button:hover {
+    background-color: #1cd760;
+    font-size: 12px;
+    margin: 29px 2px;
+}
+
+#link-button {
+    background-color: #1e1e1e;
+    border: none;
+    font-size: 12px;
+    color: white;
+}
+
+#link-button:active {
+    color: gray;
 }

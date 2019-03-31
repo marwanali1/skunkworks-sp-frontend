@@ -1,11 +1,16 @@
-.navbar {
+#navbar {
     background-color: #1e1e1e;
+    text-align: center;
 }
 
-.navbar-logo {
-
+#navbar-brand {
+    flex: 0.4;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.navbar-items {
-
+#nav-link-container {
+    flex: 0.93;
+    justify-content: flex-end;
+    align-items: center;
 }
