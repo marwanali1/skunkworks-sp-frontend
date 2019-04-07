@@ -1,56 +1,55 @@
 import React, {Component} from 'react';
-import {Alert, Button, FormControl, Row, Col} from 'react-bootstrap';
+import {Alert, Button, FormControl} from 'react-bootstrap';
 import {Redirect} from 'react-router-dom'
 
-import spotify_logo from '../../Assets/Spotify_Logo_RGB_White.png';
-import './SignUp.css';
+import spotify_logo from '../../assets/Spotify_Logo_RGB_White.png';
+import './Login.css';
 import NavBar from '../SharedComponents/NavBar.js'
 
 
-class SignUp extends Component {
+class Login extends Component {
 
     constructor(props) {
         super(props);
 
         this.state = {
             auth: {
-                firstName: "",
-                lastName: "",
                 email: "",
-                password: "",
-                confirmPassword: "",
-                username: ""
+                password: ""
             },
             loggedIn: false,
-            signUpAlert: false,
+            loginAlert: false,
             errorMessage: ""
         };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleLogin = this.handleLogin.bind(this);
         this.handleSignUp = this.handleSignUp.bind(this);
+        this.handleReset = this.handleReset.bind(this);
     }
 
     componentDidMount() {
-        document.title = "Spotify - Sign up"
+        document.title = "Spotify - Login"
     }
 
-    handleLogin(event) {
+    async handleLogin(event) {
         event.preventDefault();
-
-    }
-
-    async handleSignUp(event) {
-        event.preventDefault();
-
         console.log(this.state.loggedIn);
 
-        const response = await fetch('/auth/sign_up');
+        const response = await fetch('/auth/login');
         const body = await response.json();
 
         this.setState({loggedIn: body.isLoggedOn});
 
         console.log(this.state.loggedIn)
+    }
+
+    handleSignUp(event) {
+        event.preventDefault();
+    }
+
+    handleReset(event) {
+        event.preventDefault();
     }
 
     handleChange(event) {
@@ -64,52 +63,37 @@ class SignUp extends Component {
         return (
             <div>
                 <NavBar/>
-                <div className="signup">
-                    <span className="signup-span">
-                        <img src={spotify_logo} className="signup-logo" alt="logo" />
+                <div className="login">
+                    <span className="login-span">
+                        <img src={spotify_logo} className="login-logo" alt="logo" />
 
-                        <form onSubmit={this.handleSignUp}>
+                        <form name="Login" onSubmit={this.handleLogin}>
                             <FormControl
-                                id="signup-form"
+                                id="login-form"
                                 value={this.state.email}
                                 key="email"
                                 type="text"
-                                placeholder="Email"
+                                placeholder="Email or username"
                                 onChange={this.handleChange}/>
 
                             <FormControl
-                                id="signup-form"
+                                id="login-form"
                                 value={this.state.password}
                                 key="password"
                                 type="password"
                                 placeholder="Password"
                                 onChange={this.handleChange}/>
 
-                            <FormControl
-                                id="signup-form"
-                                value={this.state.confirmPassword}
-                                key="confirmPassword"
-                                type="password"
-                                placeholder="Confirm Password"
-                                onChange={this.handleChange}/>
-
-                            <FormControl
-                                id="signup-form"
-                                value={this.state.email}
-                                key="username"
-                                type="text"
-                                placeholder="Username"
-                                onChange={this.handleChange}/>
-
-                            <SignUpHandler
+                            <LoginHandler
                                 redirect={this.state.loggedIn}
-                                signUpAlert={this.state.signUpAlert}
+                                loginAlert={this.state.loginAlert}
                                 errorMessage={this.state.errorMessage}/>
 
-                            <Button id="signup-button" className="signup-button"><b>SIGN UP</b></Button>
+                            <Button id="login-button" className="login-button"><b>LOG IN</b></Button>
                         </form>
 
-                        <Button id="link-button" variant="link" href="/login">LOGIN</Button>
+                        <Button id="link-button" variant="link" href="/signup">SIGN UP</Button>
+                        <Button id="link-button" variant="link" href="/reset_password">RESET PASSWORD</Button>
                     </span>
                 </div>
             </div>
@@ -117,12 +101,12 @@ class SignUp extends Component {
     }
 }
 
-export default SignUp;
+export default Login;
 
-class SignUpHandler extends Component {
+class LoginHandler extends Component {
 
     render() {
-        if (this.props.signUpAlert) {
+        if (this.props.loginAlert) {
             return (
                 <Alert bsStyle="danger">
                     {this.props.errorMessage}
