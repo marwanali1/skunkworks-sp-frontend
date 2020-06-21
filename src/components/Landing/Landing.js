@@ -6,15 +6,13 @@ import './Landing.css'
 
 class Landing extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return(
-            <div className="App">
+            <div>
                 <NavBar />
-                <h1>Welcome to Home</h1>
+                <div className="landing">
+                    <h1>Welcome to Spotify Clone</h1>
+                </div>
             </div>
         )
     }
